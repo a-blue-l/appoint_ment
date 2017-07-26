@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>服务预约</title>
+	<link rel="stylesheet" href="css/LCalendar.min.css">
+	<link rel="stylesheet" href="css/appoint_ment.css">
+</head>
+<script>
+	!function(e){var n=e.innerWidth,t=document.querySelector("html");t.style.fontSize=n>540?"33.75px":.05*n+"px"}(window);
+</script>
+<body>
+	<div class="content">
+		<h2 class="content-title">请填写服务站信息</h2>
+		<div class="content-top">
+			<div class="address-box input-box line">
+				<span class="box-name">服务地点</span>
+				<span class="address-btn click-jump">
+					<input type="text" id="address" placeholder="请选择服务地点" readonly="readonly">
+					<i class="arrow"></i>
+				</span>
+			</div>
+			<div class="time-box input-box line">
+				<span class="box-name">预约时间</span>
+				<span class="time-btn click-jump">
+					<input type="text" id="timer" placeholder="请选择时间" readonly="readonly">
+					<i class="arrow"></i>
+				</span>
+				<span class="timetwo-btn click-jump">
+					<input type="text" id="timetwo" placeholder="上午" readonly="readonly" data-id=0>
+					<i class="arrow"></i>
+				</span>
+			</div>
+			<div class="type-box input-box">
+				<span class="box-name">服务类型</span>
+				<span class="type-btn click-jump">
+					<input type="text" id="sertype" placeholder="请选择服务类型" readonly="readonly">
+					<i class="arrow address-arrow"></i>
+				</span>
+			</div>
+		</div>
+		<h2 class="content-title">请填写车辆信息</h2>
+		<div class="content-bottom">
+			<div class="nametext-box input-box line">
+				<span class="box-name">客户姓名</span>
+				<span class="bottom-btn">
+					<input type="text" id="name" placeholder="请输入姓名">
+				</span>
+			</div>
+			<div class="codetext-box input-box line">
+				<span class="box-name">车牌号码</span>
+				<span class="bottom-btn">
+					<input type="text" id="codecar" placeholder="请输入车牌号码">
+				</span>
+			</div>
+			<div class="cartype-box input-box line">
+				<span class="box-name">车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型</span>
+				<span class="cartype-btn click-jump">
+					<input type="text" id="car_type" placeholder="请选择车型" readonly="readonly">
+					<i class="arrow"></i>
+				</span>
+			</div>
+			<div class="codetext-box input-box line">
+				<span class="box-name">联系电话</span>
+				<span class="bottom-btn">
+					<input type="text" id="name" placeholder="请输入联系电话">
+				</span>
+			</div>
+		</div>
+		<div class="submit"></div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/LCalendar.min.js"></script>
+<script src="js/appoint_ment.js"></script>
+</html>

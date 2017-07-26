@@ -1,0 +1,242 @@
+.px(@name, @px){
+  @{name}: @px / 37.5rem;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  border: none;
+  display: block;
+  width: 100%;
+}
+html {
+  color: #333;
+  font-size: 32px;
+}
+body {
+  .px(width, 750);
+  margin: 0 auto;
+  font-family:  'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+  font-weight: normal;
+  background: #f2f2f2;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5 "Microsoft YaHei", Helvetica, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+//content
+
+.content{
+  padding: 0 0 40/37.5rem;
+  .content-title{
+    padding: 40/37.5rem 50/37.5rem;
+    color: #999;
+    .px(font-size, 28);
+  }
+  //上半部分
+  .content-top{
+    .px(width, 750);
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0 30/37.5rem;
+    .address-btn,.type-btn{
+      .px(width, 530);
+      .px(padding-left, 50);
+    }
+    .time-btn{
+      .px(width, 300);
+      .px(padding-left, 50);
+    }
+    .timetwo-btn{
+      .px(width, 230);
+      text-align: center;
+      #timetwo{
+        text-align: center;
+      }
+    }
+  }
+  //下半部分
+  .content-bottom{
+    .px(width, 750);
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 0 30/37.5rem;
+    .bottom-btn{
+      display: block;
+      .px(width, 530);
+      height: 100%;
+      .px(padding-left, 50);
+      float: left;
+    }
+    .cartype-btn{
+      .px(width, 530);
+      .px(padding-left, 50);
+    }
+  }
+  //提交
+  .submit{
+    .px(width, 690);
+    .px(height, 92);
+    margin: 80/37.5rem auto 0;
+    background: url(../images/submit-btn.png) no-repeat center center/contain;
+  }
+}
+
+//表单公共样式
+.click-jump{
+  height: 100%;
+  .px(line-height, 110);
+  color: #ccc;
+  float: left;
+  position: relative;
+  .px(font-size, 30);
+}
+input{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: none;
+  outline-style: none;
+  .px(font-size, 30);
+  position:relative;
+  z-index: 9;
+  -webkit-tap-highlight-color: transparent;
+}
+input::-webkit-input-placeholder{
+  color: #ccc;
+}
+.input-box{
+  width: 100%;
+  .px(height, 110);
+}
+.line{
+  border-bottom: 1px solid #eee;
+}
+.box-name{
+  display: block;
+  .px(width, 160);
+  text-align: right;
+  height: 100%;
+  .px(line-height, 32);
+  padding: 39/37.5rem 0;
+  float: left;
+  .px(font-size, 32);
+}
+.arrow{
+  display: block;
+  .px(width, 30);
+  height: 100%;
+  position:absolute;
+  .px(top, 0);
+  .px(right, 0);
+  background: url(../images/arrowbg.png) no-repeat center center/contain;
+}
+
+//弹出
+.jump-bottom{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9900;
+  overflow: hidden;
+  background-color: rgba(0,0,0,.2);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  .addresslist{
+    .px(width, 750);
+    background: #fff;
+    position:absolute;
+    .px(leftm, 0);
+    .px(bottom, 0);
+    padding: 0 30/37.5rem;
+    -webkit-animation: slideInUp .3s;
+            animation: slideInUp .3s;
+    li{
+      width: 100%;
+      .px(height, 110);
+      .px(padding-left, 20);
+      .px(line-height, 110);
+      .px(font-size, 32);
+    }
+    .bluecolor{
+      color: #00b4ff;
+    }
+    .bluecolor:after{
+      content: '';
+      display: block;
+      .px(width, 43);
+      height: 100%;
+      float: right;
+      background: url(../images/thisistrue.png) no-repeat center center/contain;
+    }
+  }
+}
+
+@-webkit-keyframes slideup {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0)
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideup {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0)
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0)
+    }
+}
